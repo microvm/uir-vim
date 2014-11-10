@@ -6,8 +6,13 @@ Copy all directories into your `~/.vim/` directory, but
 [Pathogen](https://github.com/tpope/vim-pathogen) is recommended for managing
 your Vim plugins.
 
-There are some µIR snippets in the `tests` directory of the
-[microvm-refimpl](https://github.com/microvm-project/microvm-refimpl) project.
+Currently targeting the
+[microvm-refimpl2](https://github.com/microvm-project/microvm-refimpl2) project.
+There are some µIR snippets in the
+[tests](https://github.com/microvm/microvm-refimpl2/tree/master/tests/uvm-parsing-test)
+directory of the
+[microvm-refimpl2](https://github.com/microvm-project/microvm-refimpl2)
+project.
 
 Author
 ------
