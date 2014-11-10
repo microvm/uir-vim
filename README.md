@@ -7,11 +7,11 @@ Copy all directories into your `~/.vim/` directory, but
 your Vim plugins.
 
 Currently targeting the
-[microvm-refimpl2](https://github.com/microvm-project/microvm-refimpl2) project.
+[microvm-refimpl2](https://github.com/microvm/microvm-refimpl2) project.
 There are some µIR snippets in the
 [tests](https://github.com/microvm/microvm-refimpl2/tree/master/tests/uvm-parsing-test)
 directory of the
-[microvm-refimpl2](https://github.com/microvm-project/microvm-refimpl2)
+[microvm-refimpl2](https://github.com/microvm/microvm-refimpl2)
 project.
 
 Author
