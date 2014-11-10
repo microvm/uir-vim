@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: MicroVM Intermediate Representation (Text Form)
 " Maintainer: Kunshan Wang
-" Latest Revision: 14 Aug 2014
+" Latest Revision: 10 Nov 2014
 
 if exists("b:current_syntax")
   finish
@@ -13,25 +13,28 @@ syntax region uirComment start=/\/\// end=/$/
 
 syntax keyword uirTopLevel .typedef .funcsig .const .global .funcdecl .funcdef
 syntax keyword uirType int float double ref iref weakref struct array hybrid void
-syntax keyword uirType func stack thread tagref64
+syntax keyword uirType func stack thread tagref64 vector
 syntax keyword uirInst ADD SUB MUL UDIV SDIV UREM SREM SHL LSHR ASHR AND OR XOR
 syntax keyword uirInst FADD FSUB FMUL FDIV FREM
 syntax keyword uirInst EQ NE ULT ULE UGT UGE SLT SLE SGT SGE
 syntax keyword uirInst FTRUE FFALSE FORD FOEQ FONE FOLT FOLE FOGT FOGE
 syntax keyword uirInst FUNO FUEQ FUNE FULT FULE FUGT FUGE
 syntax keyword uirInst TRUNC ZEXT SEXT FPTRUNC FPEXT FPTOUI FPTOSI UITOFP SITOFP
-syntax keyword uirInst BITCAST REFCAST IREFCAST FUNCCAST
-syntax keyword uirInst SELECT BRANCH BRANCH2 SWITCH PHI CALL INVOKE TAILCALL
+syntax keyword uirInst BITCAST REFCAST
+syntax keyword uirInst SELECT BRANCH BRANCH2 SWITCH PHI CALL TAILCALL
 syntax keyword uirInst RET RETVOID THROW LANDINGPAD EXTRACTVALUE INSERTVALUE
+syntax keyword uirInst EXTRACTELEMENT INSERTELEMENT SHUFFLEVECTOR
 syntax keyword uirInst NEW NEWHYBRID ALLOCA ALLOCAHYBRID GETIREF GETFIELDIREF
 syntax keyword uirInst GETELEMIREF SHIFTIREF GETFIXEDPARTIREF GETVARPARTIREF
 syntax keyword uirInst LOAD STORE CMPXCHG ATOMICRMW FENCE TRAP WATCHPOINT
-syntax keyword uirInst CCALL NEWSTACK ICALL IINVOKE
-syntax keyword uirMemOrder NOT_ATOMIC UNORDERED MONOTONIC ACQUIRE CONSUME 
+syntax keyword uirInst CCALL NEWSTACK SWAPSTACK COMMINST
+syntax keyword uirMemOrder NOT_ATOMIC RELAXED CONSUME ACQUIRE CONSUME 
 syntax keyword uirMemOrder RELEASE ACQ_REL SEQ_CST
 syntax keyword uirAtomicRMWOp XCHG ADD SUB AND NAND OR XOR MIN MAX UMIN UMAX
 syntax keyword uirCallConv DEFAULT
-syntax keyword uirMisc KEEPALIVE bitsf bitsd
+syntax keyword uirMisc bitsf bitsd VEC VERSION EXC KEEPALIVE WEAK WPEXC
+syntax keyword uirMisc RET_WITH KILL_OLD
+syntax keyword uirMisc PASS_VALUE PASS_VOID THROW_EXC
 
 syntax match uirIdentifier /[@%][a-zA-Z0-9_\-.]\+/
 
