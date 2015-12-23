@@ -13,7 +13,8 @@ syntax region uirComment start=/\/\// end=/$/
 
 syntax keyword uirTopLevel .typedef .funcsig .const .global .funcdecl .funcdef .expose
 syntax keyword uirType int float double ref iref weakref struct array hybrid void
-syntax keyword uirType funcref stackref threadref tagref64 vector uptr ufuncptr
+syntax keyword uirType funcref stackref threadref framecursorref
+syntax keyword uirType tagref64 vector uptr ufuncptr
 syntax keyword uirInst ADD SUB MUL UDIV SDIV UREM SREM SHL LSHR ASHR AND OR XOR
 syntax keyword uirInst FADD FSUB FMUL FDIV FREM
 syntax keyword uirInst EQ NE ULT ULE UGT UGE SLT SLE SGT SGE
@@ -28,8 +29,7 @@ syntax keyword uirInst NEW NEWHYBRID ALLOCA ALLOCAHYBRID GETIREF GETFIELDIREF
 syntax keyword uirInst GETELEMIREF SHIFTIREF GETVARPARTIREF
 syntax keyword uirInst LOAD STORE CMPXCHG ATOMICRMW FENCE TRAP WATCHPOINT WPBRANCH
 syntax keyword uirInst CCALL NEWTHREAD SWAPSTACK COMMINST
-syntax keyword uirMemOrder NOT_ATOMIC RELAXED CONSUME ACQUIRE CONSUME 
-syntax keyword uirMemOrder RELEASE ACQ_REL SEQ_CST
+syntax keyword uirMemOrder NOT_ATOMIC RELAXED CONSUME ACQUIRE RELEASE ACQ_REL SEQ_CST
 syntax keyword uirAtomicRMWOp XCHG ADD SUB AND NAND OR XOR MIN MAX UMIN UMAX
 syntax keyword uirMisc bitsf bitsd VERSION EXC KEEPALIVE WEAK WPEXC PTR
 syntax keyword uirMisc RET_WITH KILL_OLD
